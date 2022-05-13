@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Term Deposit Subscription Predictor </title>
+</head>
+<body>
+
+    <h1>Term Deposit Subscription Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>duration</label><br>
+        <input type="text" name="duration"><br><br>
+
+        <label>Euribor_3M</label><br>
+        <input type="text" name="Euribor_3M"><br><br>
+
+        <label>Cust_Conf_Index</label><br>
+        <input type="text" name="Cust_Conf_Index"><br><br>
+
+        <label>Cust_Price_Index</label><br>
+        <input type="text" name="Cust_Price_Index"><br><br>
+
+        <label>age</label><br>
+        <input type="text" name="age"><br><br>
+
+        <label>month</label><br>
+        <input type="text" name="month"><br><br>
+
+        <label>day_of_week</label><br>
+        <input type="text" name="day_of_week"><br><br>
+
+        <label>campaign</label><br>
+        <input type="text" name="campaign"><br><br>
+
+        <label>job</label><br>
+        <input type="text" name="job"><br><br>
+
+        <label>default</label><br>
+        <input type="text" name="default"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
